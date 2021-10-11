@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id_conducteur</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Modification</th>
+            <th scope="col">Suppression</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for conducteur in conducteurs %}
+            <tr>
+                <th scope="row">{{ conducteur.id }}</th>
+                <td>{{ conducteur.nom }}</td>
+                <td>{{ conducteur.prenom }}</td>
+                <td>
+                    <button class="btn-primary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
