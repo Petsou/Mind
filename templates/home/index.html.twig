@@ -18,8 +18,8 @@
     {% include "home/_table.html.twig" %}
 </div>
 
-<div class="col-4">
-    
+<div class="col-3 m-3">
+    {% include "home/_conductform.html.twig" with {form : form} only %}
 </div>
 
 {% endblock %}
